@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Recipe_Management.Data;
+using Recipe_Management.Repositories;
+using Recipe_Management.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<FoodRecipeDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSqlServerConnection")));
 
+builder.Services.AddScoped<IFoodRepository, FoodRepository>();
+builder.Services.AddScoped<IFoodService, FoodService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

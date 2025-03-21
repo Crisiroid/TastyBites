@@ -34,7 +34,7 @@ namespace Recipe_Management.Services
 
         public void UpdateFood(Food food)
         {
-            return _foodRepository.Update(food);
+            _foodRepository.Update(food);
         }
     }
 }
