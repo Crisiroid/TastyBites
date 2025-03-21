@@ -4,9 +4,11 @@ namespace Recipe_Management.Controllers
 {
     public class FoodController : Controller
     {
-        public IActionResult Index()
+        [HttpGet("GetFood")]
+        public IActionResult Get(int id)
         {
-            return View();
+            return Ok(1);
         }
+
     }
 }
