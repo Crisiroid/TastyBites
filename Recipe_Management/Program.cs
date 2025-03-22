@@ -14,6 +14,10 @@ builder.Services.AddDbContext<FoodRecipeDbContext>(options => options.UseSqlServ
 
 builder.Services.AddScoped<IFoodRepository, FoodRepository>();
 builder.Services.AddScoped<IFoodService, FoodService>();
+
+builder.Services.AddScoped<IItemRepository, ItemRepository>();
+builder.Services.AddScoped<IitemService, ItemService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
