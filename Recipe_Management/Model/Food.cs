@@ -11,7 +11,7 @@ namespace Recipe_Management.Model
         public string Description { get; set; }
         public int CategoryId { get;set; }
         public string Name { get; set; }
-        public List<Item> RequiredItems { get; set; }
+        public List<int> RequiredItems { get; set; }
         public string Recipe { get; set; }
         [NotNull]
         public bool IsDeleted { get; set; }
